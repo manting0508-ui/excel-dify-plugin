@@ -54,6 +54,12 @@ jobs:
           pwd
           echo "\nDirectory structure:"
           tree || ls -R
+      
+      - name: Save My Offline Plugin File
+        uses: actions/upload-artifact@v4
+        with:
+          name: my-excel-tools-plugin
+          path: ./*.difypkg
 
       - name: Checkout target repo
         uses: actions/checkout@v3
